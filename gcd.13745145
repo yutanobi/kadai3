@@ -1,0 +1,28 @@
+#!/bin/bash
+
+remain=0
+
+
+
+if
+	 [ $1 -gt $2 ] ; then
+
+		big=$1
+		small=$2
+elif
+	[ $2 -gt $1 ] ; then
+	
+		big=$2
+		small=$1
+fi
+
+while  
+	[ $remain -eq 0 ] ; do 
+
+		remain=$(( $big % $small ))
+        	big=$small
+		small=$remain
+
+done
+
+echo "二つの数の最大公約数は" $small
